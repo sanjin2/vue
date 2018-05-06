@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="vue.js" ></script>
+		
+	</head>
+	<body>
+		<div id="root">
+			<child>
+				<h1>Dell</h1>
+			</child>
+		</div>
+		<script>
+			
+			Vue.component('child',{
+				template: `<div>
+				<p>hello</p>
+				<slot>默认内容</slot>
+				</div>`
+			})
+			
+			var vm = new Vue({
+				el:"#root"
+			});
+		</script>
+	</body>
+</html>

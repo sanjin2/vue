@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="vue.js" ></script>
+		
+	</head>
+	<body>
+		<!--父组件通过属性的方式向子组件传递数据-->
+		<div id="root">
+			<!--:count="0"传递的是数字 :count="0"传递的是字符串-->
+			<counter :count="3" @inc="handleIncrease"></counter>
+			<counter :count="2" @inc="handleIncrease"></counter>
+			<div>{{total}}</div>
+		</div>
+		<script>
+			var counter = {
+				props: ['count'],
+				data: function() {
+					return {
+						number: this.count
+					}
+				},
+				template: '<div @click="handleClick">{{number}}</div>',
+				methods: {
+					handleClick: function (){
+						this.number = this.number + 2;
+						this.$emit('inc',2);
+					}
+				}
+			}
+			var vm = new Vue({
+				el: '#root',
+				data: {
+					total:5
+				},
+				components: {
+					counter: counter
+				},
+				methods:{
+					handleIncrease: function(step){
+//						alert(step);
+						this.total += step;
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
