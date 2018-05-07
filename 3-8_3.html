@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="vue.js" ></script>
+	</head>
+	<body>
+		<div id="app">
+			<template v-for="(item,index) of list" :key="item.id">
+				<div>
+					{{item.text}}----{{index}}
+				</div>
+				<span>
+					{{item.text}}
+				</span>
+				
+			</template>
+		</div>
+		<script>
+		
+			// push pop shift unshift splice sort reverse
+			var vm = new Vue({
+				el: '#app',
+				data: {
+					list:[
+					{id:"010120201",text: "hello1"},
+					{id:"010120202",text: "hello2"},
+					{id:"010120203",text: "hello3"},
+					{id:"010120204",text: "hello4"},
+					
+				]}
+			
+			})
+		</script>
+	</body>
+</html>

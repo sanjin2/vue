@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="vue.js" ></script>
+		<style>
+			.activated {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div @click="handleDivClick"
+				:class="[activated,activatedOne]"
+				>Hello world</div>
+		</div>
+		<script>
+		
+			
+			var vm = new Vue({
+				el: '#app',
+				data: {
+					activated : "",
+					activatedOne:"activated-one"
+				},
+				methods: {
+					handleDivClick : function(){
+//						this.activated = "activated";
+						
+//						if (this.activated === "activated") {
+//							this.activated = "";
+//						}else{
+//							this.activated = "activated";
+//						}
+						
+						this.activated = this.activated === "activated" ? "" : "activated";
+						
+					}
+				}
+			
+			})
+		</script>
+	</body>
+</html>

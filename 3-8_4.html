@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="vue.js" ></script>
+	</head>
+	<body>
+		<div id="app">
+			<div v-for="(item,key,index) of userInfo">
+				{{item}}---{{key}}---{{index}}
+				
+			</div>
+		</div>
+		<script>
+		
+			// push pop shift unshift splice sort reverse
+			var vm = new Vue({
+				el: '#app',
+				data: {
+					userInfo: {
+						name: "Dell",
+						age:28,
+						gender:"male",
+						salary: "seccret"
+					}
+					}
+			
+			})
+		</script>
+	</body>
+</html>
