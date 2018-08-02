@@ -14,6 +14,16 @@
 		<script>
 		
 			// push pop shift unshift splice sort reverse
+			//eg:vm.list.splice(1,1, {id:"333",text:"Dell1"})
+/*			vm.list =[
+					{id:"010120201",text: "hello1"},
+					{id:"010120202",text: "hello2"},
+					{id:"010120203",text: "hello3"},
+					{id:"010120204",text: "hello4"},
+					
+				]引用方式改变dom元素 
+				*/
+			//list[0]下标方式改变数组的同时，页面无法刷新
 			var vm = new Vue({
 				el: '#app',
 				data: {

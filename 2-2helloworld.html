@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Hello World</title>
+		<script type="text/javascript" src="vue.js" ></script>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<!--插槽方便的向子组件传递dom元素-->
+		<div id="app">
+			<!--{{content}}插值表达式-->
+			{{content}}
+		</div>
+		<script>
+	var app = new Vue({
+		//el 实例负责管理的一个区域
+		el: '#app',
+		data: {
+			content: 'hello world'
+		}
+	})
+	
+	setTimeout(function(){
+//		$data 是 data的别名
+		app.$data.content = 'bye world';
+	},2000)
+		</script>
+	</body>
+</html>

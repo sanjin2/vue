@@ -2,10 +2,12 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>Vue的条件渲染</title>
 		<script type="text/javascript" src="vue.js" ></script>
 	</head>
 	<body>
+		<!--v-show="show" 在页面上已经渲染，属性为display:none（通过此属性控制显示影藏）-->
+		<!--v-if="show"   dom元素在页面上面移除或者添加-->
 		<div id="app">
 			<div v-if="show">{{message}}</div>
 			<div v-show="show">{{message}}</div>

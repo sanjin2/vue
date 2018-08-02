@@ -30,6 +30,10 @@ npm install -g vue
 使本地分支与线上分支保持一致
 
 
+#### vue.js和react.js比较的文章
+https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_8755614200761908747%22%7D&n_type=1&p_from=4
+
+
 
 
 

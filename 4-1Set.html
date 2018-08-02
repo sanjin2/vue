@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>组件使用细节点 </title>
 		<script type="text/javascript" src="vue.js" ></script>
 		
 	</head>
@@ -24,6 +24,7 @@
 		<table><tr><td></td></tr></table> 
 		都需要使用vue的is属性来使用模板-->
 		<script>
+			//子组件data的定义必须是函数，不能是对象
 			Vue.component('row',{
 				data: function() {
 					return {

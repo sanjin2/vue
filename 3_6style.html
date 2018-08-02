@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>Vue中的样式绑定</title>
 		<script type="text/javascript" src="vue.js" ></script>
 		<style>
 			.activated {
@@ -12,6 +12,7 @@
 	</head>
 	<body>
 		<div id="app">
+			<!--:class="{activated: isActivated}"(叫做class的对象绑定)-->
 			<div @click="handleDivClick"
 				:class="{activated: isActivated}"
 				>Hello world</div>
