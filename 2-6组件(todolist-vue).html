@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>TodoList</title>
+		<script type="text/javascript" src="vue.js"></script>
+		<style>
+
+		</style>
+	</head>
+
+	<body>
+		<!--插槽方便的向子组件传递dom元素-->
+		<div id="app">
+			<!--v-on v-for 模板指令-->
+			<input type="text" v-model="inputValue" />
+			<!--控制台打印 app.$data.inputValue-->
+			<button v-on:click="handleBtnClick">提交</button>
+			<ul>
+				<!--<li v-for="item in list">{{item}}</li>-->
+				<todo-item 
+					        v-bind:content="item"
+					        v-for="item in list">
+				</todo-item>
+			</ul>
+		</div>
+		<script>
+			//创建全局组件
+			//全局组件的使用 父组件传值（通过v-bind:content="item"），子组件接收 （props:['content'],）
+//			Vue.component("TodoItem",{
+//				props:['content'],
+//				template:"<li>{{content}}</li>"
+//			})
+ //局部组件
+ //使用时需要注册
+ 			var TodoItem = {
+ 				props:['content'],
+				template:"<li>{{content}}</li>"
+ 			}
+			var app = new Vue({
+				//el 实例负责管理的一个区域
+				el: '#app',
+				components: {
+					TodoItem
+				},
+				data: {
+					list: [],
+					inputValue: ''
+				},
+				methods: {
+					handleBtnClick: function() {
+						this.list.push(this.inputValue);
+						this.inputValue = "";
+					}
+				}
+			})
+		</script>
+	</body>
+
+</html>

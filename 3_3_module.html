@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>模板语法</title>
+		<script type="text/javascript" src="vue.js" ></script>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<!--插槽方便的向子组件传递dom元素-->
+		<div id="app">
+			<!--插值表达式也叫模板语法-->
+			<!--[v-text,v-on:click,v-bind:title]都是模板语法-->
+			<!--v-后面都是js表达式-->
+			<div>{{name + ' Lee'}}</div>
+			<div v-text="name + ' Lee'"></div>
+			<div v-html="name + ' Lee'" v-on:click="handleClick"></div>
+		</div>
+		<script>
+//			每个组件都是vue的实例
+	
+			// 生命周期函数就是vue实例在某一个时间点会自动执行的函数
+			var vm = new Vue({
+				el: '#app',
+				data: {
+					name: "Dell"
+				},
+				
+			
+			})
+		</script>
+	</body>
+</html>

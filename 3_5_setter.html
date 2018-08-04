@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>计算属性的setter和getter</title>
+		<script type="text/javascript" src="vue.js" ></script>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<div id="app">
+		{{fullName}}
+		</div>
+		<script>
+
+			var vm = new Vue({
+				el: '#app',
+				data: {
+					firstName: "Dell",
+					lastName: "Lee",
+					fullName: "Dell Lee",
+					age: 28
+				},
+		
+
+				// 计算属性 (重要属性：内置缓存)
+				computed: {
+					fullName: {
+						get: function() {
+							return this.firstName + " " + this.lastName
+						},
+						set: function(value) {
+							var arr = value.split(" ");
+							this.firstName = arr[0];
+							this.lastName = arr[1];
+							console.log(value);
+						}
+					}
+				}
+				
+			
+			})
+		</script>
+	</body>
+</html>

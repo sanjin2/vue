@@ -8,25 +8,19 @@
 	<body>
 		<div id="app">
 			<div v-for="(item,key,index) of userInfo">
-				{{item}}---{{key}}---{{index}}
+				{{item}}
 				
 			</div>
 		</div>
 		<script>
 		
 			// push pop shift unshift splice sort reverse
-			//对象通过1.引用可实现增加
-			//2.通过set(Vue的全局方法)方法增加一条  Vue.set(vm.userInfo,"address","beijing")
-			//--set的实例使用方法 vm.$set(vm.userInfo,"address","beijing")
+			//set方法  Vue.set(vm.setInfo,1,5)
+			//vm.$set(vm.userInfo,2,10)
 			var vm = new Vue({
 				el: '#app',
 				data: {
-					userInfo: {
-						name: "Dell",
-						age:28,
-						gender:"male",
-						salary: "seccret"
-					}
+					userInfo: [1,2,3,4]
 					}
 			
 			})

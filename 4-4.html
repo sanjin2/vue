@@ -8,10 +8,14 @@
 	</head>
 	<body>
 		<div id="root">
+			<!--child组件上的 @click="handleClick 为自定义事件"
+				$emit使用它触发
+			-->
 			<child @click="handleClick"></child>
 		</div>
 		<script>
 			Vue.component('child',{
+				//子组价 div上的 @click="handleClick 原生事件
 				template: '<div @click="handleClick">Child</div>',
 				methods: {
 					handleClick: function(){

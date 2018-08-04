@@ -8,6 +8,7 @@
 	<body>
 		<div id="app">
 			<div v-if="show">
+				<!--key用于解决dom元素复用的问题-->
 				用户名： <input key="username"  />
 			</div>
 			<div v-else>

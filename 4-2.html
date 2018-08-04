@@ -2,14 +2,18 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>父子组件相互传值</title>
 		<script type="text/javascript" src="vue.js" ></script>
 		
 	</head>
 	<body>
-		<!--父组件通过属性的方式向子组件传递数据-->
+		<!--父组件通过属性的方式向子组件传递数据 子组件通过事件触发向父组件传值
+			隐形规定：单向数据流 （非要修改，复制副本，改副本）
+		-->
 		<div id="root">
-			<!--:count="0"传递的是数字 :count="0"传递的是字符串-->
+			<!--:count="0"传递的是数字 count="0"传递的是字符串-->
+			<!--@监听事件-->
+			
 			<counter :count="3" @inc="handleIncrease"></counter>
 			<counter :count="2" @inc="handleIncrease"></counter>
 			<div>{{total}}</div>
@@ -25,7 +29,9 @@
 				template: '<div @click="handleClick">{{number}}</div>',
 				methods: {
 					handleClick: function (){
+						// 单向数据流，不能用this.count++
 						this.number = this.number + 2;
+						//$emit 子组件向父组件传值
 						this.$emit('inc',2);
 					}
 				}
