@@ -8,12 +8,14 @@
 	</head>
 	<body>
 		<div id="root">
+			<!--<component></component>vue自带标签，动态组件-->
 			<!--<component :is="type"></component>-->
 			<child-one v-if="type ==='child-one'"></child-one>
 			<child-two v-if="type ==='child-two'"></child-two>
 			<button @click="handleBtnClick">change</button>
 		</div>
 		<script>
+			// v-once提高静态内容的展示效率
 			Vue.component('child-one',{
 				template: '<div v-once>child-one</div>'
 			})

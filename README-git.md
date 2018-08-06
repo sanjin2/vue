@@ -6,7 +6,7 @@ git status(检查文件分支情况)
 
 # 本地获取线上分支（参考git分支创建.doc）
 1.git pull  
-2.git checkout index-swiper (切分支) 
+2.git checkout index-swiper (切分支开发) 
 
 # 分支与master主分支的合并操作
 1.git checkout master
