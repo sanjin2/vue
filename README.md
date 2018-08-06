@@ -38,4 +38,19 @@ https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_
 
 
 
+#创建初始化的时候 vue init webpack myproject，一直提示unknown command init
+https://segmentfault.com/q/1010000015117527/a-1020000015124558
+vue -V (目前用的是2.9.6)
+vue-cli 2.9.4 bug
+退回2.9.3即可
+2.9.5已修复，可以升级到最新版了
+
+#关于nodejs的npm命令无反应的解决方案 
+https://blog.csdn.net/qq_31349087/article/details/51887692
+强调：不是nodejs安装目录npm模块下的那个npmrc文件
+而是在C:\Users\{账户}\下的.npmrc文件....
+
+#使用vue-cli详细步骤
+https://blog.csdn.net/nicexibeidage/article/details/79241713
+
 
