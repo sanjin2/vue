@@ -9,6 +9,18 @@
 	</head>
 	<body>
 		<div id="root">
+			<!--
+				@before-enter="handleBeforeEnter" 接收一个参数el
+				@enter="handEnter"				接收二个参数el，done	
+				@after-enter="handleAfterEnter" 接收一个参数el
+				
+				@before-leave="handleBeforeEnter" 接收一个参数el
+				@leave="handEnter"				接收二个参数el，done	
+				@after-leave="handleAfterEnter" 接收一个参数el
+				
+				enter和leave两者使用方法完全一致
+				这三个为动画钩子
+			-->
 		
 			<transition 
 				name="fade"
@@ -40,7 +52,7 @@
 //							done();
 						},2000)
 						setTimeout(()=>{
-							done();
+							done(); //动画结束
 						},4000)
 					},
 					handleAfterEnter: function(el){

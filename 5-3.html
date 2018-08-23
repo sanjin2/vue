@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Vue中的CSS动画原理</title>
-		<link rel="stylesheet" href="../animate.css" />
+		<link rel="stylesheet" href="animate.css" />
 		<script type="text/javascript" src="vue.js" ></script>
 		<style>
 			.fade-enter,.fade-leave-to {
@@ -20,8 +20,15 @@
 	<body>
 		<div id="root">
 			<!--name默认名称为v-->
-			<!--type="transition"
-				:duration = "10000"
+			
+			<!--
+				注意：
+				appear-active-class使用它之前先加apper
+				appear 和 appear-active-class一起使用用来页面初次加载显示动画
+				
+			-->
+			<!--type="transition" 当有keyfram和transition两种动画时设置以transition的动画为准
+				:duration = "10000" 自己设置动画时长
 			-->
 			<transition 
 				

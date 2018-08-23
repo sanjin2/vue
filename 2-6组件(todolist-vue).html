@@ -19,25 +19,23 @@
 			<button v-on:click="handleBtnClick">提交</button>
 			<ul>
 				<!--<li v-for="item in list">{{item}}</li>-->
-				<todo-item 
-					        v-bind:content="item"
-					        v-for="item in list">
+				<todo-item v-bind:content="item" v-for="item in list">
 				</todo-item>
 			</ul>
 		</div>
 		<script>
 			//创建全局组件
 			//全局组件的使用 父组件传值（通过v-bind:content="item"），子组件接收 （props:['content'],）
-//			Vue.component("TodoItem",{
-//				props:['content'],
-//				template:"<li>{{content}}</li>"
-//			})
- //局部组件
- //使用时需要注册
- 			var TodoItem = {
- 				props:['content'],
-				template:"<li>{{content}}</li>"
- 			}
+			//			Vue.component("TodoItem",{
+			//				props:['content'],
+			//				template:"<li>{{content}}</li>"
+			//			})
+			//局部组件
+			//使用时需要注册
+			var TodoItem = {
+				props: ['content'],
+				template: "<li>{{content}}</li>"
+			}
 			var app = new Vue({
 				//el 实例负责管理的一个区域
 				el: '#app',

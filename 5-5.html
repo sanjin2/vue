@@ -16,14 +16,23 @@
 	<body>
 		<div id="root">
 		<!--name="fade"-->
+		<!--mode="out-in"vue的mode指令-->
+		<!--
+			<component :is="type"></component>动态组件定义
+		-->
 			<transition mode="out-in">
 				<component :is="type"></component>
 				
 				
-				<!--<child v-if="show"></child>
-				<child-one v-else></child-one>-->
-			<!--<div v-if="show" key="hello">hello world</div>
-			<div v-else key="bye">Bye World</div>-->
+				<!--
+				<child v-if="show"></child>
+				<child-one v-else></child-one>
+				-->
+			<!--
+				key="hello" 阻止vue复用
+				<div v-if="show" key="hello">hello world</div>
+				<div v-else key="bye">Bye World</div>
+			-->
 			</transition>
 			<button @click="handleClick">切换</button>
 		</div>

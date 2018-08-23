@@ -24,6 +24,8 @@
 			<button @click="handleClick">切换</button>
 		</div>
 		<script>
+			//v-if="show" v-if 才可实现子组件动画效果 v-show不行
+			
 			Vue.component('fade',{
 				props: ['show'],
 				template: `
