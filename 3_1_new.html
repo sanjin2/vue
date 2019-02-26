@@ -12,29 +12,27 @@
 		<!--插槽方便的向子组件传递dom元素-->
 		<div id="root">
 			<div v-on:click="handleClick">
-			{{message}}
+				{{message}}
 			</div>
 			<item></item>
 		</div>
 		<script>
-//			每个组件都是vue的实例
+		/*每个组件都是vue的实例*/
 		Vue.component('item', {
 			template: '<div>hello world</div>'
 		})
-			//vue实例的属性都以$开头
-			var vm = new Vue({
-				el: '#root',
-				data: {
-					message: "hello world"
-				},
-				methods: {
-					handleClick: function() {
-						alert("hello");
-					}
+		/*vue实例的属性都以$开头*/
+		var vm = new Vue({
+			el: '#root',
+			data: {
+				message: "hello world"
+			},
+			methods: {
+				handleClick: function() {
+					alert("hello");
 				}
-			
-			
-			})
+			}
+		})
 		</script>
 	</body>
 </html>

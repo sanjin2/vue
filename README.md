@@ -53,4 +53,7 @@ https://blog.csdn.net/qq_31349087/article/details/51887692
 #使用vue-cli详细步骤
 https://blog.csdn.net/nicexibeidage/article/details/79241713
 
+# $.proxy()
+https://www.cnblogs.com/hongchenok/p/3919497.html
+
 

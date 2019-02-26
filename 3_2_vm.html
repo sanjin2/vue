@@ -14,9 +14,8 @@
 			
 		</div>
 		<script>
-//			每个组件都是vue的实例
-	
-			// 生命周期函数就是vue实例在某一个时间点会自动执行的函数
+			/*每个组件都是vue的实例*/
+			/*生命周期函数就是vue实例在某一个时间点会自动执行的函数*/
 			var vm = new Vue({
 				el: '#app',
 				template: "<div>{{test}}</div>",
@@ -35,6 +34,7 @@
 					console.log("beforeMount");
 				},
 				mounted: function() {
+					//$el最外层的元素包括元素内容
 					console.log(this.$el);
 					console.log("mounted");
 				},
@@ -50,8 +50,6 @@
 				update: function() {
 					console.log("update");
 				}
-			
-			
 			})
 		</script>
 	</body>

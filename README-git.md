@@ -11,7 +11,7 @@ ps:查看分支状况  git status
 
 # 分支与master主分支的合并操作
 1.git checkout master
-2.git merge origin/index-swiper
+2.git merge origin/index-swiper(git merge index-swiper)
 3.git push
 
 # 分支与分支的合并
